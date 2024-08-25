@@ -60,11 +60,12 @@ export default defineConfig({
       output: {
         // These settings ensure the primary JS and CSS file references are always index.{js,css}
         // so we can SSR the index.html as text response from server/index.js without breaking references each build.
-        entryFileNames: 'index.js',
+        entryFileNames: 'anythingllm/index.js',
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'index.css') return `index.css`;
-          return assetInfo.name;
+          
+          return "anythingllm/" + assetInfo.name;
         },
+        chunkFileNames: "anythingllm/js/[name]-[hash].js"
       },
       external: [
         // Reduces transformation time by 50% and we don't even use this variant, so we can ignore.

@@ -220,8 +220,8 @@ class MetaGenerator {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             ${this.#assembleMeta()}
-            <script type="module" crossorigin src="/index.js"></script>
-            <link rel="stylesheet" href="/index.css">
+            <script type="module" crossorigin src="/anythingllm/index.js"></script>
+            <link rel="stylesheet" href="/anythingllm/index.css">
           </head>
           <body>
             <div id="root" class="h-screen"></div>

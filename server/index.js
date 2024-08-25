@@ -44,7 +44,7 @@ if (!!process.env.ENABLE_HTTPS) {
   require("@mintplex-labs/express-ws").default(app); // load WebSockets in non-SSL mode.
 }
 
-app.use("/api", apiRouter);
+app.use("/anythingllm/api", apiRouter);
 systemEndpoints(apiRouter);
 extensionEndpoints(apiRouter);
 workspaceEndpoints(apiRouter);
