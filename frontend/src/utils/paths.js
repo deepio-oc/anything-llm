@@ -1,5 +1,7 @@
 import { API_BASE } from "./constants";
 
+const BASE_URL = "/anythingllm"
+
 export default {
   home: () => {
     return "/";
@@ -9,28 +11,28 @@ export default {
   },
   onboarding: {
     home: () => {
-      return "/onboarding";
+      return `${BASE_URL}/onboarding`;
     },
     survey: () => {
-      return "/onboarding/survey";
+      return `${BASE_URL}/onboarding/survey`;
     },
     llmPreference: () => {
-      return "/onboarding/llm-preference";
+      return `${BASE_URL}/onboarding/llm-preference`;
     },
     embeddingPreference: () => {
-      return "/onboarding/embedding-preference";
+      return `${BASE_URL}/onboarding/embedding-preference`;
     },
     vectorDatabase: () => {
-      return "/onboarding/vector-database";
+      return `${BASE_URL}/onboarding/vector-database`;
     },
     userSetup: () => {
-      return "/onboarding/user-setup";
+      return `${BASE_URL}/onboarding/user-setup`;
     },
     dataHandling: () => {
-      return "/onboarding/data-handling";
+      return `${BASE_URL}/onboarding/data-handling`;
     },
     createWorkspace: () => {
-      return "/onboarding/create-workspace";
+      return `${BASE_URL}/onboarding/create-workspace`;
     },
   },
   github: () => {
@@ -50,101 +52,101 @@ export default {
   },
   workspace: {
     chat: (slug) => {
-      return `/workspace/${slug}`;
+      return `${BASE_URL}/workspace/${slug}`;
     },
     settings: {
       generalAppearance: (slug) => {
-        return `/workspace/${slug}/settings/general-appearance`;
+        return `${BASE_URL}/workspace/${slug}/settings/general-appearance`;
       },
       chatSettings: (slug) => {
-        return `/workspace/${slug}/settings/chat-settings`;
+        return `${BASE_URL}/workspace/${slug}/settings/chat-settings`;
       },
       vectorDatabase: (slug) => {
-        return `/workspace/${slug}/settings/vector-database`;
+        return `${BASE_URL}/workspace/${slug}/settings/vector-database`;
       },
       members: (slug) => {
-        return `/workspace/${slug}/settings/members`;
+        return `${BASE_URL}/workspace/${slug}/settings/members`;
       },
       agentConfig: (slug) => {
-        return `/workspace/${slug}/settings/agent-config`;
+        return `${BASE_URL}/workspace/${slug}/settings/agent-config`;
       },
     },
     thread: (wsSlug, threadSlug) => {
-      return `/workspace/${wsSlug}/t/${threadSlug}`;
+      return `${BASE_URL}/workspace/${wsSlug}/t/${threadSlug}`;
     },
   },
   apiDocs: () => {
     return `${API_BASE}/docs`;
   },
   orderFineTune: () => {
-    return `/fine-tuning`;
+    return `${BASE_URL}/fine-tuning`;
   },
   settings: {
     system: () => {
-      return `/settings/system-preferences`;
+      return `${BASE_URL}/settings/system-preferences`;
     },
     users: () => {
-      return `/settings/users`;
+      return `${BASE_URL}/settings/users`;
     },
     invites: () => {
-      return `/settings/invites`;
+      return `${BASE_URL}/settings/invites`;
     },
     workspaces: () => {
-      return `/settings/workspaces`;
+      return `${BASE_URL}/settings/workspaces`;
     },
     chats: () => {
-      return "/settings/workspace-chats";
+      return `${BASE_URL}/settings/workspace-chats`;
     },
     llmPreference: () => {
-      return "/settings/llm-preference";
+      return `${BASE_URL}/settings/llm-preference`;
     },
     transcriptionPreference: () => {
-      return "/settings/transcription-preference";
+      return `${BASE_URL}/settings/transcription-preference`;
     },
     audioPreference: () => {
-      return "/settings/audio-preference";
+      return `${BASE_URL}/settings/audio-preference`;
     },
     embedder: {
-      modelPreference: () => "/settings/embedding-preference",
-      chunkingPreference: () => "/settings/text-splitter-preference",
+      modelPreference: () => `${BASE_URL}/settings/embedding-preference`,
+      chunkingPreference: () => `${BASE_URL}/settings/text-splitter-preference`,
     },
     embeddingPreference: () => {
-      return "/settings/embedding-preference";
+      return `${BASE_URL}/settings/embedding-preference`;
     },
     vectorDatabase: () => {
-      return "/settings/vector-database";
+      return `${BASE_URL}/settings/vector-database`;
     },
     security: () => {
-      return "/settings/security";
+      return `${BASE_URL}/settings/security`;
     },
     appearance: () => {
-      return "/settings/appearance";
+      return `${BASE_URL}/settings/appearance`;
     },
     agentSkills: () => {
-      return "/settings/agents";
+      return `${BASE_URL}/settings/agents`;
     },
     apiKeys: () => {
-      return "/settings/api-keys";
+      return `${BASE_URL}/settings/api-keys`;
     },
     logs: () => {
-      return "/settings/event-logs";
+      return `${BASE_URL}/settings/event-logs`;
     },
     privacy: () => {
-      return "/settings/privacy";
+      return `${BASE_URL}/settings/privacy`;
     },
     embedSetup: () => {
-      return `/settings/embed-config`;
+      return `${BASE_URL}/settings/embed-config`;
     },
     embedChats: () => {
-      return `/settings/embed-chats`;
+      return `${BASE_URL}/settings/embed-chats`;
     },
     experimental: () => {
-      return `/settings/beta-features`;
+      return `${BASE_URL}/settings/beta-features`;
     },
   },
   experimental: {
     liveDocumentSync: {
-      manage: () => `/settings/beta-features/live-document-sync/manage`,
+      manage: () => `${BASE_URL}/settings/beta-features/live-document-sync/manage`,
     },
   },
 };
