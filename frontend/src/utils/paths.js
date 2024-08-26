@@ -1,6 +1,6 @@
 import { API_BASE } from "./constants";
 
-const BASE_URL = "/anythingllm"
+const BASE_URL = window.location.origin + "/anythingllm"
 
 export default {
   home: () => {
